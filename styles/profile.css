@@ -28,6 +28,7 @@
     overflow-y: auto;
     background: #f5f5f5;
     transition: width 0.4s cubic-bezier(.4,0,.2,1), margin-left 0.4s cubic-bezier(.4,0,.2,1), height 0.4s cubic-bezier(.4,0,.2,1);
+    scroll-behavior: smooth;
 }
 .profile-sidebar {
     width: 320px;
