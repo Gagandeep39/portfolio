@@ -83,6 +83,9 @@
     .main-layout {
         flex-direction: column;
         height: auto;
+        /* Allow content to flow and the page to scroll on the viewport on small screens
+           so position: sticky on children (like the nav) can work as expected. */
+        overflow: visible;
         transition: flex-direction 0.4s cubic-bezier(.4,0,.2,1);
     }
     .profile-sidebar {
@@ -98,6 +101,9 @@
         width: 100%;
         margin-left: 0;
         height: auto;
+        /* Remove the inner scroll container on mobile so the browser viewport handles scrolling.
+           This lets sticky elements inside .main-content stick to the top of the viewport. */
+        overflow: visible;
         transition: width 0.4s cubic-bezier(.4,0,.2,1), margin-left 0.4s cubic-bezier(.4,0,.2,1), height 0.4s cubic-bezier(.4,0,.2,1);
     }
 }
