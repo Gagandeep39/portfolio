@@ -1,0 +1,29 @@
+/* Styles for sections: home, about, projects, contact */
+.section {
+    padding: 4rem 2rem;
+    min-height: 60vh;
+}
+#home {
+    background: #f5f5f5;
+    min-height: calc(100vh - 1rem); /* Adjust to match nav height if needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+#about,
+#projects,
+#contact {
+    padding: 4rem 2rem;
+    min-height: 60vh;
+}
+#about {
+    background: #e0e7ff;
+}
+#projects {
+    background: #fef9c3;
+}
+#contact {
+    background: #d1fae5;
+}

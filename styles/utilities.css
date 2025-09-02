@@ -1,0 +1,17 @@
+/* Utility classes for layout and spacing */
+.flex {
+    display: flex;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.p-0 {
+    padding: 0;
+}
+.p-2 {
+    padding: 2rem;
+}
+.mt-4 {
+    margin-top: 4rem;
+}
