@@ -1,4 +1,9 @@
 /* Base styles for body, fonts, and resets */
+/* Use border-box sizing so padding and borders are included in width calculations. */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
