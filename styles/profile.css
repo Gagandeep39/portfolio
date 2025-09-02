@@ -1,0 +1,78 @@
+/* Profile sidebar styles */
+.main-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.profile-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 320px;
+    min-width: 260px;
+    background: #fff;
+    box-shadow: 2px 0 16px rgba(0,0,0,0.07);
+    border-radius: 0 2rem 2rem 0;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2000;
+}
+.main-content {
+    width: calc(100vw - 320px);
+    height: 100vh;
+    overflow-y: auto;
+    background: #f5f5f5;
+}
+.profile-sidebar {
+    width: 320px;
+    min-width: 260px;
+    background: #fff;
+    box-shadow: 2px 0 16px rgba(0,0,0,0.07);
+    border-radius: 2rem;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #e0e7ff;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 4px solid #e0e7ff;
+}
+.profile-info {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.profile-info .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.profile-info .location,
+.profile-info .email {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.25rem;
+}
+.profile-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.profile-social a {
+    color: #222;
+    font-size: 1.5rem;
+    transition: color 0.2s;
+}
+.profile-social a:hover {
+    color: #2563eb;
+}
