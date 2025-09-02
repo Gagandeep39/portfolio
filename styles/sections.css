@@ -16,7 +16,7 @@
 #projects,
 #contact {
     padding: 4rem 2rem;
-    min-height: 60vh;
+    min-height: calc(100vh - 1rem);
 }
 #about {
     background: #e0e7ff;
