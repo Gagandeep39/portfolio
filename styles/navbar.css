@@ -2,7 +2,7 @@
 nav {
     background: #222;
     color: #fff;
-    padding: 1rem;
+    padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -13,6 +13,7 @@ nav ul {
     gap: 2rem;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 @media (max-width: 900px) {
@@ -21,9 +22,12 @@ nav ul {
         width: 100%;
     }
 }
-}
+
 nav ul li {
     cursor: pointer;
+}
+nav ul li:last-child {
+  margin-left: auto;
 }
 nav ul li a {
     color: #fff;

@@ -15,7 +15,6 @@
     min-width: 260px;
     background: #fff;
     box-shadow: 2px 0 16px rgba(0,0,0,0.07);
-    border-radius: 0 2rem 2rem 0;
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -35,7 +34,6 @@
     min-width: 260px;
     background: #fff;
     box-shadow: 2px 0 16px rgba(0,0,0,0.07);
-    border-radius: 2rem;
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -91,7 +89,6 @@
         width: 100%;
         min-width: 0;
         height: auto;
-        border-radius: 0 0 2rem 2rem;
         box-shadow: 0 2px 16px rgba(0,0,0,0.07);
         z-index: 1;
         transition: all 0.4s cubic-bezier(.4,0,.2,1);

@@ -1,0 +1,20 @@
+.theme-toggle-btn {
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    background: #444;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background 0.3s, color 0.3s;
+}
+.theme-toggle-btn:hover {
+    background: #2563eb;
+    color: #fff;
+}
+.dark-theme .theme-toggle-btn {
+    background: #23272f;
+    color: #f3f3f3;
+}
