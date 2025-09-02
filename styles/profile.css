@@ -76,3 +76,24 @@
 .profile-social a:hover {
     color: #2563eb;
 }
+
+@media (max-width: 900px) {
+    .main-layout {
+        flex-direction: column;
+        height: auto;
+    }
+    .profile-sidebar {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        border-radius: 0 0 2rem 2rem;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+        z-index: 1;
+    }
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+    }
+}
