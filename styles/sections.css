@@ -1,22 +1,28 @@
 /* Styles for sections: home, about, projects, contact */
-.section {
-    padding: 4rem 2rem;
-    min-height: 60vh;
+.root,
+:root {
+    /* Height of the sticky navbar. Adjust this if your navbar size changes. */
+    --nav-offset: 4rem;
 }
+
+/* Ensure anchor scrolling leaves space for the sticky navbar */
+section {
+    scroll-margin-top: var(--nav-offset);
+}
+
 #home {
     background: #f5f5f5;
-    min-height: calc(100vh - 1rem); /* Adjust to match nav height if needed */
+    min-height: calc(100vh - 4rem); /* Adjust to match nav height if needed */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 2rem;
 }
 #about,
 #projects,
 #contact {
     padding: 4rem 2rem;
-    min-height: calc(100vh - 1rem);
+    min-height: calc(100vh - 4rem);
 }
 #about {
     background: #e0e7ff;
