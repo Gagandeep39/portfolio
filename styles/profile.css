@@ -1,3 +1,28 @@
+/* Profile title pill style */
+.profile-title-pill {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    background: #f0f2f5;
+    border-radius: 999px;
+}
+
+/* Dark theme pill adjustment */
+.dark-theme .profile-title-pill {
+    background: #23232a;
+    color: #bfc6d1;
+    box-shadow: 0 1px 4px rgba(37,99,235,0.08);
+    letter-spacing: 0.02em;
+}
+/* Profile divider line style */
+.profile-divider {
+    height: 1px;
+    border: none;
+    background: #c1c1c1a1;
+    margin: 2rem 1rem;
+}
 /* Profile sidebar styles */
 .main-layout {
     display: flex;
