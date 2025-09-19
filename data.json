@@ -1,0 +1,10 @@
+{
+    "name": "John Doe",
+    "title": "Software Engineer",
+    "location": "Montreal, Canada",
+    "social": {
+        "github": "abc123",
+        "linkedin": "john-doe",
+        "email": "john.doe@mail.com"
+    }
+}
