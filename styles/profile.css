@@ -1,3 +1,17 @@
+/* Center the download resume button */
+.download-resume-btn {
+    margin: 1rem 0;
+
+    >a>button {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        gap: 0.25rem;
+        cursor: pointer;
+    }
+}
+
 /* Profile title pill style */
 .profile-title-pill {
     display: inline-block;
@@ -13,9 +27,10 @@
 .dark-theme .profile-title-pill {
     background: #23232a;
     color: #bfc6d1;
-    box-shadow: 0 1px 4px rgba(37,99,235,0.08);
+    box-shadow: 0 1px 4px rgba(37, 99, 235, 0.08);
     letter-spacing: 0.02em;
 }
+
 /* Profile divider line style */
 .profile-divider {
     height: 1px;
@@ -23,14 +38,24 @@
     background: #c1c1c1a1;
     margin: 2rem 1rem;
 }
+
 /* Profile sidebar styles */
 .main-layout {
     display: flex;
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    transition: flex-direction 0.4s cubic-bezier(.4,0,.2,1);
+    transition: flex-direction 0.4s cubic-bezier(.4, 0, .2, 1);
 }
+
+.download {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem;
+}
+
 .profile-sidebar {
     position: fixed;
     left: 0;
@@ -38,26 +63,28 @@
     height: 100vh;
     width: 320px;
     min-width: 260px;
-    box-shadow: 2px 0 16px rgba(0,0,0,0.07);
+    box-shadow: 2px 0 16px rgba(0, 0, 0, 0.07);
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 2000;
-    transition: all 0.4s cubic-bezier(.4,0,.2,1);
+    transition: all 0.4s cubic-bezier(.4, 0, .2, 1);
 }
+
 .main-content {
     width: calc(100% - 320px);
     height: 100vh;
     overflow-y: auto;
     background: #f5f5f5;
-    transition: width 0.4s cubic-bezier(.4,0,.2,1), margin-left 0.4s cubic-bezier(.4,0,.2,1), height 0.4s cubic-bezier(.4,0,.2,1);
+    transition: width 0.4s cubic-bezier(.4, 0, .2, 1), margin-left 0.4s cubic-bezier(.4, 0, .2, 1), height 0.4s cubic-bezier(.4, 0, .2, 1);
     scroll-behavior: smooth;
 }
+
 .profile-sidebar {
     width: 320px;
     min-width: 260px;
-    box-shadow: 2px 0 16px rgba(0,0,0,0.07);
+    box-shadow: 2px 0 16px rgba(0, 0, 0, 0.07);
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -65,6 +92,7 @@
     position: relative;
     justify-content: center;
 }
+
 .profile-photo {
     width: 14rem;
     height: 14rem;
@@ -74,15 +102,18 @@
     margin-bottom: 1.5rem;
     border: 4px solid #e0e7ff;
 }
+
 .profile-info {
     text-align: center;
     margin-bottom: 1.5rem;
 }
+
 .profile-info .name {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
+
 .profile-info .location,
 .profile-info .email {
     font-size: 1rem;
@@ -91,19 +122,22 @@
     gap: 12px;
     align-items: center;
 
-    > a {
+    >a {
         display: flex;
     }
 }
+
 .profile-social {
     display: flex;
     gap: 1rem;
 }
+
 .profile-social a {
     color: #222;
     font-size: 1.5rem;
     transition: color 0.2s;
 }
+
 .profile-social a:hover {
     color: #2563eb;
 }
@@ -115,17 +149,19 @@
         /* Allow content to flow and the page to scroll on the viewport on small screens
            so position: sticky on children (like the nav) can work as expected. */
         overflow: visible;
-        transition: flex-direction 0.4s cubic-bezier(.4,0,.2,1);
+        transition: flex-direction 0.4s cubic-bezier(.4, 0, .2, 1);
     }
+
     .profile-sidebar {
         position: static;
         width: 100%;
         min-width: 0;
         height: auto;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
         z-index: 1;
-        transition: all 0.4s cubic-bezier(.4,0,.2,1);
+        transition: all 0.4s cubic-bezier(.4, 0, .2, 1);
     }
+
     .main-content {
         width: 100%;
         margin-left: 0;
@@ -133,6 +169,6 @@
         /* Remove the inner scroll container on mobile so the browser viewport handles scrolling.
            This lets sticky elements inside .main-content stick to the top of the viewport. */
         overflow: visible;
-        transition: width 0.4s cubic-bezier(.4,0,.2,1), margin-left 0.4s cubic-bezier(.4,0,.2,1), height 0.4s cubic-bezier(.4,0,.2,1);
+        transition: width 0.4s cubic-bezier(.4, 0, .2, 1), margin-left 0.4s cubic-bezier(.4, 0, .2, 1), height 0.4s cubic-bezier(.4, 0, .2, 1);
     }
 }
