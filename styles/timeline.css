@@ -6,7 +6,6 @@
   width: 100%;
   max-width: 900px;
   padding: 1.5rem 1.25rem 1rem 1.25rem;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
 }
 
 .timeline-section h2,
@@ -99,11 +98,6 @@
   margin-bottom: 0.35rem;
 }
 
-/* Dark theme adjustments */
-.dark-theme .timeline-section,
-.dark-theme .experience-section {
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
-}
 
 .dark-theme .timeline-item::after {
   background: #2a2f39;
