@@ -1,3 +1,5 @@
+import { renderTimeline } from './timeline-utils.js';
+
 function loadExperience(data) {
     const expList = document.getElementById('experience-timeline');
     if (!(expList && Array.isArray(data.experience))) return;
@@ -18,12 +20,6 @@ function loadExperience(data) {
                 </li>
                 `;
     });
-}
-
-// Small reusable renderer for timeline sections
-function renderTimeline(container, items, mapItemToHtml) {
-    if (!container || !Array.isArray(items)) return;
-    container.innerHTML = items.map(mapItemToHtml).join('');
 }
 
 export { loadExperience };

@@ -37,5 +37,27 @@
                 "Wrote unit tests and documentation to improve maintainability"
             ]
         }
+    ],
+    "education": [
+        {
+            "institution": "University of Somewhere",
+            "degree": "B.Sc. in Computer Science",
+            "duration": "2016 – 2020",
+            "highlights": [
+                "Graduated with Honors",
+                "Major in Software Engineering",
+                "President, Coding Club"
+            ]
+        },
+        {
+            "institution": "Institute of Technology",
+            "degree": "M.Sc. in Data Science",
+            "duration": "2021 – 2023",
+            "highlights": [
+                "Thesis on time-series forecasting",
+                "Teaching Assistant for Machine Learning",
+                "Dean's List"
+            ]
+        }
     ]
 }
