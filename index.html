@@ -12,11 +12,7 @@
     <link rel="stylesheet" href="styles/utilities.css">
     <link rel="stylesheet" href="styles/profile.css">
     <link rel="stylesheet" href="styles/theme-toggle.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/timeline.css">
 </head>
 
 <body>
@@ -57,8 +53,7 @@
         <div class="main-content">
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">About me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
@@ -67,17 +62,13 @@
                     </li>
                 </ul>
             </nav>
-            <section id="home">
-                <h1>Welcome to My Portfolio</h1>
+            <section id="about">
+                <h1>Resume</h1>
                 <p>This is the home section. Scroll down to learn more about me!</p>
                 <div class="experience-section" aria-labelledby="experience-title">
                     <h2 id="experience-title">Experience</h2>
                     <ol class="timeline" id="experience-timeline" aria-live="polite"></ol>
                 </div>
-            </section>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>Write something about yourself here.</p>
             </section>
             <section id="projects">
                 <h2>Projects</h2>
@@ -93,7 +84,7 @@
         </div>
     </div>
     <script src="theme-toggle.js"></script>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
 </body>
 </body>
 

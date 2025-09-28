@@ -10,7 +10,7 @@ section {
     scroll-margin-top: var(--nav-offset);
 }
 
-#home {
+#about {
     background: #f5f5f5;
     min-height: calc(100vh - 4rem);
     /* Adjust to match nav height if needed */
@@ -20,15 +20,10 @@ section {
     align-items: center;
 }
 
-#about,
 #projects,
 #contact {
     padding: 4rem 2rem;
     min-height: calc(100vh - 4rem);
-}
-
-#about {
-    background: #e0e7ff;
 }
 
 #projects {
@@ -56,4 +51,8 @@ section {
 
 .experience-section h2 {
     margin: 0 0 1rem 0;
+}
+
+.dark-theme #about {
+    background: #0f1115;
 }
