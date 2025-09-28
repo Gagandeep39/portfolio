@@ -12,24 +12,29 @@ section {
 
 #home {
     background: #f5f5f5;
-    min-height: calc(100vh - 4rem); /* Adjust to match nav height if needed */
+    min-height: calc(100vh - 4rem);
+    /* Adjust to match nav height if needed */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 #about,
 #projects,
 #contact {
     padding: 4rem 2rem;
     min-height: calc(100vh - 4rem);
 }
+
 #about {
     background: #e0e7ff;
 }
+
 #projects {
     background: #fef9c3;
 }
+
 #contact {
     background: #d1fae5;
 }
@@ -40,4 +45,143 @@ section {
     text-align: center;
     padding: 1rem 0;
     font-size: 1rem;
+}
+
+/* Experience timeline */
+.experience-section {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 2rem;
+    padding: 1.5rem 1.25rem 1rem 1.25rem;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.experience-section h2 {
+    margin: 0 0 1rem 0;
+}
+
+.timeline {
+    /* Shared x-position for the vertical line and dots */
+    --line-x: 16px;
+    /* distance from the left edge */
+    --dot-size: 12px;
+    --item-gap: 1.5rem;
+    /* vertical space between items */
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* no padding; items will handle their own left padding */
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 0 0 var(--item-gap) 0;
+    padding-left: calc(var(--line-x) + 18px);
+    /* space to the right of the line */
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: var(--line-x);
+    top: 0.6rem;
+    /* aligns dot near the item's title */
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border-radius: 50%;
+    background: #2563eb;
+    /* blue dot */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    transform: translateX(-50%);
+    /* center on the line */
+    z-index: 2;
+    /* ensure circle is above the connector line */
+}
+
+.timeline-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: var(--line-x);
+    top: calc(0.6rem + (var(--dot-size) / 2));
+    /* start at center of current dot */
+    height: calc(100% + var(--item-gap));
+    /* extend to center of next dot regardless of item height */
+    width: 2px;
+    background: #d1d5db;
+    /* neutral gray */
+    transform: translateX(-50%);
+    z-index: 1;
+    /* line sits behind the circle */
+}
+
+.timeline-content {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+}
+
+.timeline-content .header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+.timeline-content .role {
+    font-weight: 700;
+}
+
+.timeline-content .duration {
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+.timeline-content .company {
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.responsibilities {
+    margin: 0.25rem 0 0.25rem 1.25rem;
+}
+
+.responsibilities li {
+    margin-bottom: 0.35rem;
+}
+
+/* Dark theme adjustments */
+.dark-theme #home {
+    background: #0f1115;
+}
+
+.dark-theme .experience-section {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+.dark-theme .timeline-item::after {
+    background: #2a2f39;
+}
+
+.dark-theme .timeline-item::before {
+    background: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.dark-theme .timeline-content {
+    background: #16181d;
+    border-color: #2a2f39;
+}
+
+.dark-theme .timeline-content .duration {
+    color: #a3aab7;
+}
+
+@media (max-width: 600px) {
+    .timeline-content .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

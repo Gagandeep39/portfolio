@@ -6,5 +6,36 @@
         "github": "abc123",
         "linkedin": "john-doe",
         "email": "john.doe@mail.com"
-    }
+    },
+    "experience": [
+        {
+            "company": "Acme Corp",
+            "role": "Senior Software Engineer",
+            "duration": "Jan 2023 – Present",
+            "responsibilities": [
+                "Led development of a React/Node.js analytics dashboard used by 10+ internal teams",
+                "Improved API performance by 35% by profiling hotspots and optimizing queries",
+                "Mentored 3 junior engineers through code reviews and pair programming"
+            ]
+        },
+        {
+            "company": "Globex Inc.",
+            "role": "Full‑Stack Developer",
+            "duration": "Aug 2020 – Dec 2022",
+            "responsibilities": [
+                "Built microservices in Express and Go with CI/CD on GitHub Actions",
+                "Designed PostgreSQL schemas and migrations for multi-tenant apps",
+                "Collaborated with designers to deliver responsive UI components"
+            ]
+        },
+        {
+            "company": "Initech",
+            "role": "Software Developer Intern",
+            "duration": "May 2019 – Jul 2020",
+            "responsibilities": [
+                "Developed internal tools in Python to automate reporting",
+                "Wrote unit tests and documentation to improve maintainability"
+            ]
+        }
+    ]
 }
