@@ -9,11 +9,11 @@ fetch('./data.json')
         // Profile Info
         loadSocial(data);
 
-    // Experience Timeline
-    loadExperience(data);
+        // Experience Timeline
+        loadExperience(data);
 
-    // Education Timeline
-    loadEducation(data);
+        // Education Timeline
+        loadEducation(data);
 
     })
     .catch(error => console.error('Error loading data.json:', error));
