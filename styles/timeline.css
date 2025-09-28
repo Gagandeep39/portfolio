@@ -1,0 +1,132 @@
+/* Reusable Timeline Styles */
+
+/* Generic container for any timeline-based section */
+.timeline-section,
+.experience-section {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 2rem;
+  padding: 1.5rem 1.25rem 1rem 1.25rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-section h2,
+.experience-section h2 {
+  margin: 0 0 1rem 0;
+}
+
+/* The timeline list */
+.timeline {
+  /* Shared positions/sizes (overridable per instance) */
+  --line-x: 16px;       /* distance from the left edge */
+  --dot-size: 12px;     /* size of the circle */
+  --item-gap: 1.5rem;   /* vertical spacing between items */
+
+  list-style: none;
+  margin: 0;
+  padding: 0;           /* items will handle their own left padding */
+  position: relative;
+}
+
+/* Each item holds the dot and the connector */
+.timeline-item {
+  position: relative;
+  margin: 0 0 var(--item-gap) 0;
+  padding-left: calc(var(--line-x) + 18px); /* space to the right of the line */
+}
+
+/* The circle (dot) */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: var(--line-x);
+  top: 0.6rem; /* aligns dot near the item's header */
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+  background: #2563eb; /* blue dot */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  transform: translateX(-50%); /* center on the line */
+  z-index: 2; /* circle above the connector */
+}
+
+/* The connector to the next dot */
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: var(--line-x);
+  top: calc(0.6rem + (var(--dot-size) / 2)); /* from current dot center */
+  height: calc(100% + var(--item-gap));     /* to next dot center */
+  width: 2px;
+  background: #d1d5db; /* neutral gray */
+  transform: translateX(-50%);
+  z-index: 1; /* line sits behind the circle */
+}
+
+/* The card/body of each item */
+.timeline-content {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
+
+.timeline-content .header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-content .role {
+  font-weight: 700;
+}
+
+.timeline-content .duration {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.timeline-content .company {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.responsibilities {
+  margin: 0.25rem 0 0.25rem 1.25rem;
+}
+
+.responsibilities li {
+  margin-bottom: 0.35rem;
+}
+
+/* Dark theme adjustments */
+.dark-theme .timeline-section,
+.dark-theme .experience-section {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+.dark-theme .timeline-item::after {
+  background: #2a2f39;
+}
+
+.dark-theme .timeline-item::before {
+  background: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.dark-theme .timeline-content {
+  background: #16181d;
+  border-color: #2a2f39;
+}
+
+.dark-theme .timeline-content .duration {
+  color: #a3aab7;
+}
+
+@media (max-width: 600px) {
+  .timeline-content .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

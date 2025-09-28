@@ -1,3 +1,9 @@
+// Small reusable renderer for timeline sections
+function renderTimeline(container, items, mapItemToHtml) {
+    if (!container || !Array.isArray(items)) return;
+    container.innerHTML = items.map(mapItemToHtml).join('');
+}
+
 // Fetch data from data.json and populate HTML
 fetch('./data.json')
     .then(response => response.json())
@@ -33,10 +39,8 @@ fetch('./data.json')
 
         // Experience Timeline
         const expList = document.getElementById('experience-timeline');
-        console.log(data);
-        
         if (expList && Array.isArray(data.experience)) {
-            const itemsHtml = data.experience.map((job) => {
+            renderTimeline(expList, data.experience, (job) => {
                 const responsibilities = Array.isArray(job.responsibilities)
                     ? job.responsibilities.map((r) => `<li>${r}</li>`).join('')
                     : '';
@@ -52,9 +56,7 @@ fetch('./data.json')
                         </div>
                     </li>
                 `;
-            }).join('');
-
-            expList.innerHTML = itemsHtml;
+            });
         }
     })
     .catch(error => console.error('Error loading data.json:', error));
