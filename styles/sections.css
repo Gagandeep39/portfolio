@@ -42,15 +42,26 @@ section {
     font-size: 1rem;
 }
 
-/* Experience container keeps spacing; timeline specifics live in timeline.css */
-.experience-section {
+/* Summary section styles */
+.summary-section {
     width: 100%;
     max-width: 900px;
-    margin-top: 2rem;
+    padding: 1.25rem 1.25rem 1rem 1.25rem;
 }
 
-.experience-section h2 {
+.summary-section h2 {
     margin: 0 0 1rem 0;
+}
+
+.summary-section p {
+    margin: 0;
+    line-height: 1.7;
+    color: #374151;
+    margin: 0 1rem;
+}
+
+.dark-theme .summary-section p {
+    color: #cbd5e1;
 }
 
 .dark-theme #about {
